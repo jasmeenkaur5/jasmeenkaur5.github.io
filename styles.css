@@ -1,0 +1,250 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Section styling with flexbox */
+.WelcomeSection,.UpdatesSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 2rem;
+}
+
+.WelcomeSection img {
+    max-width: 50%;
+    height: auto;
+}
+
+.WelcomeSection p {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+
+/* Header styles */
+header#main-header {
+    background: #005a9c;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+/* Main navigation styles */
+nav#main-nav ul {
+    list-style: none;
+    background: #eee;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+nav#main-nav ul li {
+    display: inline;
+}
+
+nav#main-nav ul li a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: #005a9c;
+}
+
+nav#main-nav ul li a:hover,
+nav#main-nav ul li a:focus {
+    background: #005a9c;
+    color: #fff;
+}
+
+/* Main content and section styles */
+main#content {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+main#content section {
+    margin-bottom: 2rem;
+}
+
+/* Card styles */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #005a9c;
+}
+
+.card img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.card p {
+    color: #666;
+}
+
+/* Responsive grid layout for cards */
+.grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card img {
+    width: 100%; /* Ensure images fill the card width */
+    height: auto;
+    border-bottom: 1px solid #eee;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Adds a subtle hover effect */
+}
+
+
+/* Form styles */
+form#contact-form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style adjustments for form fields on focus */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    background-color: #eef6fc;
+    border-color: #7ba4c0;
+    outline: none;
+}
+
+/* Error message styling */
+.error-message {
+    display: none;
+    color: #d9534f;
+    margin-top: 0.25rem;
+}
+
+/* Button styles */
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+}
+
+button[type="reset"] {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+button:hover,
+button:focus {
+    opacity: 0.9;
+}
+
+/* Footer styles */
+footer#footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer#footer nav a {
+    color: #bbb;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer#footer nav a:hover,
+footer#footer nav a:focus {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section img {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+
+    section p {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .form-group {
+        flex-direction: column;
+    }
+    .services-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
