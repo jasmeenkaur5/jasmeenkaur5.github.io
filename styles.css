@@ -123,13 +123,13 @@ main#content section {
 }
 
 .service-card img {
-    width: 100%; /* Ensure images fill the card width */
+    width: 100%; 
     height: auto;
     border-bottom: 1px solid #eee;
 }
 
 .service-card:hover {
-    transform: translateY(-5px); /* Adds a subtle hover effect */
+    transform: translateY(-5px); 
 }
 
 
